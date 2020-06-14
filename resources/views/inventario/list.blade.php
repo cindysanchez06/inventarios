@@ -13,7 +13,7 @@
 			<a href="{{ route('home') }}" class="btn btn-warning">Todo</a>
 		</div>
 		<div class="form-group" style="float: right;">
-			
+            <a href="{{ route('inventario.create') }}" class="btn btn-success">Crear</a>
 		</div>			
 	</div>
 	<hr>
