@@ -1,0 +1,486 @@
+.Connected{
+    float: right;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: green;
+}
+.Disconnected{
+    float: right;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: red;
+}
+#carga{
+  position: absolute; 
+  
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.78);
+  width: 100%;
+  height: 100%;
+
+}
+/***********************
+menu vertical de vista chat
+*************************/
+.menu
+{
+    padding:0;
+    list-style:none;
+    width:150px;
+    font-size:14px;
+}
+ 
+.menu li a
+{
+    display: block;
+    border-bottom: 1px solid rgba(0,0,0, 0.2);
+    border-top: 1px solid rgba(255,255,255, 0.2);
+    background:#238276;
+    text-decoration:none;
+    color:#FFF;
+    text-shadow: 1px 0px 1px rgba(0,0,0,0.2);
+    filter: dropshadow(color=#000, offx=1, offy=0);
+    padding:10px;
+
+}
+ 
+.menu li ul li a
+{
+    font-size:12px;
+    color:#238276;
+    text-shadow: 1px 0px 1px rgba(255,255,255,0.5);
+}
+ 
+.menu li a:hover
+{
+    background:#16554c;
+    -moz-transition: background 0.3s ease-in;
+    -webkit-transition: background 0.3s ease-in;
+    -o-transition: background 0.3s ease-in;
+}
+ 
+.menu ul
+{
+    
+    margin:0;
+    padding:0;
+    list-style:none;
+    height:0;
+    overflow: hidden;
+    transition:1s;
+    -moz-transition:1s;
+    -webkit-transition:1s;
+
+}
+ 
+.menu li:hover ul
+{
+    height:117px;
+    overflow-y:auto;
+    overflow-x:hidden;
+
+}
+ 
+.menu ul li a
+{
+    background:white;
+}
+ 
+.menu ul li a:hover 
+{
+    background: none repeat scroll 0 0 #fc7323;
+    color: #fff;
+    -moz-transition: color 0.4s ease;
+    -webkit-transition: color 0.4s ease;
+    -o-transition: color 0.4s ease;
+}
+.menu span
+{
+  margin-left:6px;
+  padding-right: 10px;
+}
+.menu img
+{
+  margin-left:-4px;
+  margin-right: 6px;
+}
+#preguntas{
+  width: 100%;
+}
+/***********************
+MENU HORIZONTAL DE LATOUT
+*************************/
+@media (max-width: 767px){
+  .navbar-inverse .navbar-nav .open .dropdown-menu>li>a 
+  {
+      color: #ffffff;
+  }
+  .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover 
+  {
+      background-color: #5cb85c;
+  }
+}
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #ffffff;
+}
+.navbar-inverse .navbar-toggle {
+    border-color: #ffffff;
+}
+.navbar-inverse .navbar-toggle:hover {
+   background-color: #5cb85c;
+}
+.navbar-inverse .navbar-toggle:focus {
+   background-color: #5cb85c;
+}
+.navbar{
+  background: #1c6e58;
+  color: white;
+  border: none;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: white;
+}
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+    color: #fff;
+    background-color: #5cb85c;
+}
+.navbar-inverse .navbar-nav>li>a:hover {
+    background: #5cb85c;
+}
+.dropdown-menu>li>a:hover {
+   background: #5cb85c;
+   color: white;
+   width: 100%;
+   height: 100%;
+}
+.dropdown-menu>li>a{
+  
+  padding: 8px;
+}
+.navbar-nav>li>.dropdown-menu {
+    padding: 0px;
+    border-radius: 0px 0px 10px 10px;
+}
+hr
+{
+    border:0;
+    border-bottom:1px solid rgba(230, 230, 230, 1);
+    margin: 0px 0px 0px 0px;
+    
+}
+.dropdown-menu{
+  border-color: none;
+  border: none;
+
+}
+
+/***********************
+Video para fondo de pantalla
+*************************/
+#video-background 
+{
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: -1;
+  -webkit-filter: opacity(35%);
+}
+/***********************
+validaciones ajax
+*************************/
+#Error,#Errordos,#Errortres,#Errorcuatro,#errorcinco,#Errorletras,#Err
+{
+  background-image:url(../media/no.jpg);
+  background-repeat:no-repeat;
+  background-position:left; 
+  color:#FF0000; 
+  padding-left:33px; 
+  padding-top:6px;
+  padding-right:10px;
+}
+
+#Success
+{
+  background-image:url(../media/yes.jpg);
+  background-repeat:no-repeat;
+  background-position:left; 
+  color:#669933; 
+  padding-left:33px; 
+  padding-top:6px;
+  padding-right:10px;
+}
+#sus
+{
+  background-image:url(../media/yes.jpg);
+  background-repeat:no-repeat;
+  background-position:left; 
+  color:#669933; 
+  padding-left:33px; 
+  padding-top:6px;
+  padding-right:10px;
+}
+/***********************
+validacion input
+*************************/
+*:focus 
+{
+  outline: none;
+}
+
+.required_notification 
+{
+	color: #d45252;
+	margin: 5px 0 0 0;
+	display: inline;
+	float: right;
+}
+select:required{
+  background: #fff url(../media/red_asterisk.png) no-repeat 98% center;
+}
+input:required
+{
+	background: #fff url(../media/red_asterisk.png) no-repeat 98% center;
+}
+
+.contact_form input:focus:invalid
+{
+	background: #fff url(../media/invalid.png) no-repeat 98% center;
+	box-shadow: 0 0 5px #d45252;
+	border-color: #b03535;
+}
+
+.contact_form input:required:valid
+{
+	background: #fff url(../media/valid.png) no-repeat 98% center;
+	box-shadow: 0 0 5px #5cd053;
+	border-color: #28921f;
+}
+.contact_form select:focus:invalid
+{
+  background: #fff url(../media/invalid.png) no-repeat 98% center;
+  box-shadow: 0 0 5px #d45252;
+  border-color: #b03535;
+}
+
+.contact_form select:required:valid
+{
+  background: #fff url(../media/valid.png) no-repeat 98% center;
+  box-shadow: 0 0 5px #5cd053;
+  border-color: #28921f;
+}
+
+.form_hint 
+{
+	background: #d45252;
+	border-radius: 3px 3px 3px 3px;
+	color: white;
+	margin-left: 8px;
+	padding: 1px 6px;
+	z-index: 999; 
+	position: absolute;
+	display: none;																		
+}
+.form_hint::before 
+{
+	content: "\25C0"; 
+	color: #d45252;
+	position: absolute;
+	top:1px;
+	left:-6px; 
+}
+
+.contact_form input:focus + .form_hint {display: inline;}
+.contact_form input:required:valid + .form_hint {background: #28921f;}
+.contact_form input:required:valid + .form_hint::before {color:#28921f;}
+.contact_form select:focus + .form_hint {display: inline;}
+.contact_form select:required:valid + .form_hint {background: #28921f;}
+.contact_form select:required:valid + .form_hint::before {color:#28921f;}
+/***********************
+cuerpo
+*************************/
+body 
+{
+   text-align: justify;
+   font-family: verdana;
+   color: black;
+   width: 100%;
+   overflow-x: hidden;
+   background-color: rgba(0, 21, 44, 0.5);
+   background: url('../media/carrusell2.png') top center no-repeat;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   background-attachment: fixed;
+   position: relative;
+   -webkit-font-smoothing: antialiased;
+   -moz-font-smoothing: antialiased;
+   -ms-font-smoothing: antialiased;
+   -o-font-smoothing: antialiased;
+   font-smoothing: antialiased;
+   opacity: 0.9;    
+}
+/***********************
+ Estilos del scroll
+*************************/
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-button {
+    width: 12px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background: tranparent;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+}
+
+::-webkit-scrollbar-thumb {
+    border: thin solid #232c34;
+    background: -webkit-linear-gradient(top, #4ca06d, #5aafb0);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 225, .5), inset 1px 0 0 rgba(255, 255, 255, .4), inset 0 1px 2px rgba(255, 255, 255, .3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: -webkit-linear-gradient(top, #238276, #238276);
+}
+/***********************
+Pseudo-clase
+*************************/
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(77, 161, 112, .6);
+}
+
+/***********************
+FOOTER 
+*************************/
+#footer
+{
+    background: rgba(4,94,71,0.91);
+    background: -moz-linear-gradient(left, rgba(4,94,71,0.91) 0%, rgba(4,94,71,0.93) 28%, rgba(66,156,58,0.96) 78%, rgba(66,156,58,0.97) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(4,94,71,0.91)), color-stop(28%, rgba(4,94,71,0.93)), color-stop(78%, rgba(66,156,58,0.96)), color-stop(100%, rgba(66,156,58,0.97)));
+    background: -webkit-linear-gradient(left, rgba(4,94,71,0.91) 0%, rgba(4,94,71,0.93) 28%, rgba(66,156,58,0.96) 78%, rgba(66,156,58,0.97) 100%);
+    background: -o-linear-gradient(left, rgba(4,94,71,0.91) 0%, rgba(4,94,71,0.93) 28%, rgba(66,156,58,0.96) 78%, rgba(66,156,58,0.97) 100%);
+    background: -ms-linear-gradient(left, rgba(4,94,71,0.91) 0%, rgba(4,94,71,0.93) 28%, rgba(66,156,58,0.96) 78%, rgba(66,156,58,0.97) 100%);
+    background: linear-gradient(to right, rgba(4,94,71,0.91) 0%, rgba(4,94,71,0.93) 28%, rgba(66,156,58,0.96) 78%, rgba(66,156,58,0.97) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#045e47', endColorstr='#429c3a', GradientType=1 );
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+/***********************
+vista de listar 
+*************************/
+.row
+{
+  width: 95%;
+  margin: 80px auto;
+
+}
+.container
+{
+  width: 100%;
+}
+
+.table
+{
+  margin-top: 10px;
+}
+/***********************
+modalS 
+*************************/
+.modal-header
+{
+  background: #238276;
+  color: white;
+}
+.modal-content
+{
+  text-align: center;
+  border-color: #238276;
+  -webkit-box-shadow: 3px 7px 23px -1px rgba(0,0,0,0.73);
+  -moz-box-shadow: 3px 7px 23px -1px rgba(0,0,0,0.73);
+  box-shadow: 3px 7px 23px -1px rgba(0,0,0,0.73);
+}
+.redondo{
+  background: none;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/***********************
+titulos de home
+*************************/
+.titulos{
+    width: 100%;
+    display: none;
+}
+.titulo{
+    text-align: center;
+    margin: 0 auto;
+    width: 70%;
+    position: relative;
+    border-radius: 10px;
+    padding: 10px 0;
+    color: black;
+    text-shadow: 2px 2px 6px 0px rgba(117,117,117,1);
+}
+.show-pass-titulo
+{
+  display: block !important;
+}
+/***********************
+botones formularios 
+*************************/
+ 
+ .btn-naranja{
+  background:#fc7323; 
+  color: white;
+ }
+/***********************
+paneles
+*************************/
+.panel
+{
+  background: rgba(255, 255, 255, 0.83);
+  border-color: #238276;
+  -webkit-box-shadow: 3px 7px 23px -1px rgba(0,0,0,0.73);
+  -moz-box-shadow: 3px 7px 23px -1px rgba(0,0,0,0.73);
+  box-shadow: 3px 7px 23px -1px rgba(0,0,0,0.73);
+}
+
+.panel-heading
+{
+  background: #1c6e58;
+  color: white;
+}
+.panel-footer
+{
+   background: #238276;
+}
+
+
+/***********************
+mensajes
+*************************/
+.mensajes
+{
+  width: 100%;
+  height: 50px;
+  border-color: black;
+}
