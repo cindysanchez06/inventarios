@@ -17,6 +17,7 @@
             </li>
             @if(isset(Auth::user()->rol_id) && Auth::user()->rol_id == 1)
               <li class="dropdown">
+                <a href="{{route('usuario.index') }}" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-user"></i> Usuarios</a>
               </li>
             @endif
           </ul>

@@ -19,3 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('inventario','inventarioController');
+
+Route::resource('usuario','UserController');
+Route::put('usuario/update', ['as' => 'usuario/update', 'uses' => 'UserController@update']);
