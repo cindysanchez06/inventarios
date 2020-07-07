@@ -15,7 +15,7 @@ class AddTablaRoles extends Migration
         });
 
         Schema::table('users', function (Blueprint $table) {
-            $table->unsignedInteger('rol_id')->nullable(false);
+            $table->unsignedInteger('rol_id')->nullable();
             $table->foreign('rol_id')->references('id')->on('roles');
         });
     }
