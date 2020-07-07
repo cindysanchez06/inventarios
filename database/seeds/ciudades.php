@@ -1,41 +1,36 @@
 <?php
-
 use Illuminate\Database\Seeder;
 
-class ciudades extends Seeder
+class Ciudades extends Seeder
 {
     public function run()
     {
-        DB::table('ciudades')->insert(array(
+        $hoy = date("Y-m-d H:i:s");
+        \DB::table('ciudades')->insert(array(
             0  => array(
-                'id'         => 1,
                 'nombre'     => 'Bogotá',
-                'created_at' => null,
-                'updated_at' => null,
+                'created_at' => $hoy,
+                'updated_at' => $hoy,
             ),
             1  => array(
-                'id'         => 2,
                 'nombre'     => 'Medellin',
-                'created_at' => null,
-                'updated_at' => null,
+                'created_at' => $hoy,
+                'updated_at' => $hoy,
             ),
             2  => array(
-                'id'         => 3,
                 'nombre'     => 'Cali',
-                'created_at' => null,
-                'updated_at' => null,
+                'created_at' => $hoy,
+                'updated_at' => $hoy,
             ),
             3  => array(
-                'id'         => 4,
                 'nombre'     => 'Barranquilla',
-                'created_at' => null,
-                'updated_at' => null,
+                'created_at' => $hoy,
+                'updated_at' => $hoy,
             ),
             4  => array(
-                'id'         => 5,
                 'nombre'     => 'Cartagena',
-                'created_at' => null,
-                'updated_at' => null,
+                'created_at' => $hoy,
+                'updated_at' => $hoy,
             ),
         ));
     }

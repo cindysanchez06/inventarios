@@ -6,7 +6,7 @@ class rams extends Seeder
 {
     public function run()
     {
-        DB::table('rams')->insert(array(
+        \DB::table('rams')->insert(array(
             0  => array(
                 'id'         => 1,
                 'nombre'     => '1GB',

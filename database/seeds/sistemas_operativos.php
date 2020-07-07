@@ -6,7 +6,7 @@ class sistemas_operativos extends Seeder
 {
     public function run()
     {
-        DB::table('sistemas_operativos')->insert(array(
+        \DB::table('sistemas_operativos')->insert(array(
             0  => array(
                 'id'         => 1,
                 'nombre'     => 'Windows 7',

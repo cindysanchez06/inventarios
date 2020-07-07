@@ -10,12 +10,12 @@ class AddTablaRoles extends Migration
     {
         Schema::create('roles', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nombre',50);
+            $table->string('nombre',50)->nullable();
             $table->timestamps();
         });
 
         Schema::table('users', function (Blueprint $table) {
-            $table->unsignedBigInteger('rol_id');
+            $table->unsignedInteger('rol_id')->nullable(false);
             $table->foreign('rol_id')->references('id')->on('roles');
         });
     }

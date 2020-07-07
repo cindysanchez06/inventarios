@@ -8,10 +8,11 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(Roles::class);
         $this->call(user::class);
-        $this->call(marca::class);
+        $this->call(Ciudades::class);
         $this->call(procesadores::class);
+        $this->call(marca::class);
         $this->call(rams::class);
-        $this->call(ciudades::class);
         $this->call(sistemas_operativos::class);
+        
     }
 }
